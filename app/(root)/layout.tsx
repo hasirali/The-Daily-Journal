@@ -1,12 +1,11 @@
-import { ReactNode } from 'react';
-import Navbar from '@/app/components/Navbar';
-import 'easymde/dist/easymde.min.css';
+import Navbar from "@/components/Navbar";
 
-export default function Layout({ children }: { children: ReactNode }) {
+export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
-        <main className="main">
-            <Navbar/>
+        <main className="font-work-sans">
+            <Navbar />
+
             {children}
         </main>
-    );
+    )
 }
