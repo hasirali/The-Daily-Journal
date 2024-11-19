@@ -22,13 +22,12 @@ export default async function Home({
     <>
       <section className="pink_container">
         <h1 className="heading">
-          Pitch Your Startup, <br />
-          Connect With Entrepreneurs
+          The Daily Journal, <br />
+          Share Your Ideas
         </h1>
 
         <p className="sub-heading !max-w-3xl">
-          Submit Ideas, Vote on Pitches, and Get Noticed in Virtual
-          Competitions.
+        The Daily Journal is an open platform designed for everyone to share their thoughts, stories, and insights. 
         </p>
 
         <SearchForm query={query} />
@@ -36,7 +35,7 @@ export default async function Home({
 
       <section className="section_container">
         <p className="text-30-semibold">
-          {query ? `Search results for "${query}"` : "All Startups"}
+          {query ? `Search results for "${query}"` : "All Blogs"}
         </p>
 
         <ul className="mt-7 card_grid">
@@ -45,7 +44,7 @@ export default async function Home({
               <StartupCard key={post?._id} post={post} />
             ))
           ) : (
-            <p className="no-results">No startups found</p>
+            <p className="no-results">Oops Nothing found😭</p>
           )}
         </ul>
       </section>
